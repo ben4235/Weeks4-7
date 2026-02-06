@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class powerSwitch : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    public float speed;
+
     void Update()
     {
-        
+        transform.eulerAngles += new Vector3(0f, 0f, speed * Time.deltaTime);
+    }
+
+    public void StartSpin()
+    {
+        speed = 100f;
+    }
+
+    public void StopSpin()
+    {
+        speed = 0f;
     }
 }
