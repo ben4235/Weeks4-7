@@ -4,7 +4,9 @@ using UnityEngine.InputSystem;
 
 public class objectIdentification : MonoBehaviour
 {
-
+    public bool isHovering;
+    public bool shouldTurnOn;
+    public bool shouldTurnOff;
     public GameObject warperObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
