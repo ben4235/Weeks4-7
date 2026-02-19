@@ -1,12 +1,11 @@
 using UnityEngine;
 
-public class Barrel : MonoBehaviour
+public class toyController : MonoBehaviour
 {
-    GameObject knife;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        knife Instantiate;
+        
     }
 
     // Update is called once per frame
