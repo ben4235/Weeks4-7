@@ -36,7 +36,6 @@ public class ToyController : MonoBehaviour
     {
         //initializing our ui through start
         UpdateBallCountUI();
-        UpdateDropPositionUI();
     }
 
     void Update()
@@ -53,9 +52,6 @@ public class ToyController : MonoBehaviour
         //this is for rotating the dropper, transform.rotate will add rotation every frame. 
         //we want to rotate the dropper around the z axis in order for it to swing left and right.
         dropper.transform.Rotate(0f, 0f, dropperRotateSpeed * Time.deltaTime);
-
-        //to constantly update the ui
-        UpdateDropPositionUI();
 
         //check the list and remove every entry where the condition is true. 
         activeBalls.RemoveAll(b => b == null);
@@ -110,12 +106,7 @@ public class ToyController : MonoBehaviour
         {
             if (b != null) count++;
         }
+        //this will join the string + the count of the current list.
         ballCountText.text = "Balls: " + count;
-    }
-
-    private void UpdateDropPositionUI()
-    {
-        float xPos = dropper.transform.position.x;
-        dropPositionText.text = "X: " + xPos.ToString("F1");
     }
 }
